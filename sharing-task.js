@@ -30,6 +30,17 @@ reusable functions that solve specific tasks. This activity encourages:
 // - Takes a name and a role (e.g., "Alice", "speaker")
 // - Returns a string in the format: "Name: Alice, Role: Speaker"
 
+function generateBadge(name, role){
+    return `Name: ${name}, Role: ${role}`
+}
+
+let testBob = generateBadge("Bob", "Director");
+console.log(testBob);
+let testSam = generateBadge ("Sam", "Assistant");
+console.log(testSam);
+let testCal = generateBadge("Cal", "Bro");
+console.log(testCal);
+
 // Steps:
 // 1. Define the function with two parameters.
 // 2. Format the output string properly.
@@ -45,6 +56,30 @@ reusable functions that solve specific tasks. This activity encourages:
 // - Applies a 10% discount if attendees exceed 100.
 // - Returns the total cost.
 
+function calculateTotalCost(numAttendees, cost){
+    let total = calculateSubTotal(numAttendees, cost);
+
+    if (total > 100.0){
+        return total * .9;
+    }
+    else{
+        return total;
+    }
+    
+}
+
+function calculateSubTotal(numAttendees, cost){
+    return numAttendees * cost;
+}
+
+let testJason = calculateTotalCost(110, 20);
+console.log(testJason);
+let testMelissa = calculateTotalCost(20, 200);
+console.log(testMelissa);
+let testDarcy = calculateTotalCost(20, 200);
+console.log(testDarcy);
+let test2Stacey = calculateTotalCost (50, 150);
+console.log(test2Stacey);
 // Steps:
 // 1. Multiply attendees by cost.
 // 2. Check if attendee count is over 100.
@@ -64,7 +99,14 @@ reusable functions that solve specific tasks. This activity encourages:
 // 1. Check if the string includes both "@" and ".".
 // 2. Return true or false accordingly.
 
+function validateEmail(email){
+    return email.includes("@") && email.includes(".");
+}
 
+console.log(validateEmail("test@somewhere.com"));
+console.log(validateEmail("not.valid"));
+console.log(validateEmail("test1@testing.com"));
+console.log(validateEmail("working@lc.com"));
 // ============================================
 // 🧠 Collaborative Steps
 // ============================================
