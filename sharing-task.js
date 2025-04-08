@@ -59,7 +59,7 @@ console.log(testCal);
 function calculateTotalCost(numAttendees, cost){
     let total = calculateSubTotal(numAttendees, cost);
 
-    if (total > 100.0){
+    if (numAttendees > 100.0){
         return total * .9;
     }
     else{
